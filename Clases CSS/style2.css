@@ -1,0 +1,27 @@
+* {
+    background-color: red;
+}
+
+h2 {
+    background-color: blue;
+    color: chartreuse;
+}
+
+#tituloh3 {
+    background-color: white;
+}
+
+#cosmeFulanito {
+    background-color: aqua;
+}
+
+.titulo{
+    /* background-color: #9306B2; */
+    /* background-color: rgb(147, 6, 178); */
+    background-color: rgba(147, 6, 178, 0.7);
+    color: white;
+}
+
+.subrayado {
+    text-decoration: underline;
+}

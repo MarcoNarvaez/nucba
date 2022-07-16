@@ -1,4 +1,29 @@
-h2 {
+.cuadrado {
     background-color: blue;
-    color: chartreuse;
+    width: 200px;
+    height: 200px;
+}
+
+.rectangulo {
+    background-color: red;
+    height: 200px;
+    width: 50vw;
+}
+
+.rectanguloHijo {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 75%;
+    height: 100%;
+}
+
+.rectangulo2 {
+    background-color: purple;
+    height: 200px;
+    width: 50%;
+}
+
+.rectangulo2Hijo{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 75vh;
+    width: 75vw;
 }
