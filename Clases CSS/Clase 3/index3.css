@@ -1,5 +1,127 @@
-.caja {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+html,
+body {
+  box-sizing: border-box;
+  font-size: 25px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+  padding-top: 2em;
+}
+
+.contenedor {
+  border: 1px solid black;
+  font-size: 25px;
+  height: 90%;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  min-width: 30em;
+}
+
+.controles {
+  background-color: lightblue;
+  height: 3em;
+  width: 100%;
+}
+
+.selector-categoria {
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: .5em;
+  cursor: pointer;
+  font-size: .8em;
+  height: 2em;
+  padding-left: .5em;
+  -webkit-appearance: none;
+  width: 80%;
+}
+
+.icono {
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+}
+
+table, tr{
+  width: 100%;
+}
+
+.celdaControles {
+  border: 1px solid black;
+  height: 2em;
+}
+
+.celdaTitulo{
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+.celdaLabelSelector{
+  padding-right: .5em;
+  text-align: right;
+  width: 50%;
+}
+
+.celdaBusqueda{
+  max-width: 3em;
+  width: 3em;
+}
+.celdaFiltroRef{
+  width: 5em;
+}
+.celdaFiltroRef input{
+  width: 5em;
+}
+.celdaFiltroDesc{
+  
+}
+.celdaCrear{
+  
+}
+
+.celdaResultados{
+  border: 1px solid black;
+  height: 2em;
+}
+.celdaIcono{
+  min-width: 3em;
+  text-align: right;
+  width: 3em;
+}
+.celdaRef{
+  min-width: 7em;
+  text-align: center;
+  width: 7em;
+}
+.celdaDesc{
+  max-width: 16em;
+  min-width: 16em;
+  overflow: hidden;
+  text-overflow: ellipsis;    
+  white-space: nowrap;  
+  width: 16em;
+  width: calc(100% - 14em);   
+}
+.celdaOpc{
+  min-width: 4em;
+  text-align: center;
+  padding-right: 1em;
+  width: 4em;
+}
+.celdaOpc .glyphicon-remove-sign{
+  color: red;
+  cursor: pointer;
+}
+.celdaOpc .glyphicon-info-sign{
+  color: blue;
+  cursor: pointer;
 }

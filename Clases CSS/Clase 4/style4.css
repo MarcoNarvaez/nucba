@@ -1,0 +1,14 @@
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+.cuadrado {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 10px;
+}

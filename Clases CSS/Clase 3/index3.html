@@ -1,12 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Inventario v0.1</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 </head>
+
 <body>
-    <div class="caja"></div>
+  <div class="contenedor" ng-app="InventarioApp" ng-controller="InventarioCtrl">
+
+    <table class="controles">
+      <tr>
+        <th colspan="4" class="celdaControles celdaTitulo">Sistema de gestión de inventarios</th>
+      </tr>
+      <tr>
+        <td colspan="2" class="celdaControles celdaLabelSelector">Visualizar categoría</td>
+        <td colspan="2" class="celdaControles">
+          <select class="selector-categoria" ng-model="categoria" ng-options="cat for cat in listaCategorias" ng-change="actualizaCategoria()">
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="celdaControles celdaBusqueda"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></td>
+        <td class="celdaControles celdaFiltroRef">
+          [<input ng-model="filterRef" placeholder="Referencia" />]
+        </td>
+        <td class="celdaControles celdaFiltroDesc">
+          <input ng-model="filterDesc" placeholder="Descripción" />
+        </td>
+        <td class="celdaControles celdaCrear"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></td>
+      </tr>
+    </table>
+
+    <table class="resultados">
+      <tr ng-repeat="item in listaItems | filter:{ref:filterRef, desc:filterDesc}">
+        <td class="celdaResultados celdaIcono"><img class="icono" ng-src="{{item.img}}" /></td>
+        <td class="celdaResultados celdaRef">[{{item.ref}}]</td>
+        <td class="celdaResultados celdaDesc">{{item.desc}}</td>
+        <td class="celdaResultados celdaOpc">
+          <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+        </td>
+      </tr>
+    </table>
+  </div>
 </body>
+
 </html>
